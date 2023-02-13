@@ -2,10 +2,12 @@ package types
 
 import "time"
 
-type WasmExec struct {
+type GidWasmExec struct {
 	OneRowID        bool      `db:"one_row_id"`
 	Height          int64     `db:"height"`
 	ContractAddress time.Time `db:"contract_address"`
-	Params          string    `db:"params"`
+	RegName         string    `db:"reg_name"`
+	Duration        string    `db:"duration"`
 	Sender          string    `db:"sender"`
+	Coins           *DbCoins  `db:"coins"`
 }
