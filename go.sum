@@ -869,8 +869,6 @@ github.com/fjl/memsize v0.0.0-20180418122429-ca190fb6ffbc/go.mod h1:VvhXpOYNQvB+
 github.com/flynn/go-shlex v0.0.0-20150515145356-3f9db97f8568/go.mod h1:xEzjJPgXI435gkrCt3MPfRiAkVrwSbHsst4LCFVfpJc=
 github.com/fogleman/gg v1.2.1-0.20190220221249-0403632d5b90/go.mod h1:R/bRT+9gY/C5z7JzPU0zXsXHKM4/ayA+zqcVNZzPa1k=
 github.com/fogleman/gg v1.3.0/go.mod h1:R/bRT+9gY/C5z7JzPU0zXsXHKM4/ayA+zqcVNZzPa1k=
-github.com/forbole/comdex/v8 v8.1.1 h1:Qj/8jEzYvnlFoUcWDFgdNDrrVCZYJ3aDCs48d2D4zGU=
-github.com/forbole/comdex/v8 v8.1.1/go.mod h1:Wxwmgoeu5/65vKzwmGuQXU9hkk6yEbiPAT3+DSkRDYQ=
 github.com/forbole/juno/v4 v4.0.1-0.20230208101932-3ab93fbccd60 h1:CapCRiS/GwWT6pq6KUcqmj4i154AZN56JYn09lRAcJI=
 github.com/forbole/juno/v4 v4.0.1-0.20230208101932-3ab93fbccd60/go.mod h1:hCRacfMD51xodLkIahDKnViP6fAh9/68Hg6EHkBEmlk=
 github.com/form3tech-oss/jwt-go v3.2.2+incompatible/go.mod h1:pbq4aXjuKjdthFRnoDwaVPLA+WlJuPGy+QneDUgJi2k=
@@ -1238,6 +1236,8 @@ github.com/gostaticanalysis/forcetypeassert v0.1.0/go.mod h1:qZEedyP/sY1lTGV1uJ3
 github.com/gostaticanalysis/nilerr v0.1.1/go.mod h1:wZYb6YI5YAxxq0i1+VJbY0s2YONW0HU0GPE3+5PWN4A=
 github.com/gostaticanalysis/testutil v0.3.1-0.20210208050101-bfb5c8eec0e4/go.mod h1:D+FIZ+7OahH3ePw/izIEeH5I06eKs1IKI4Xr64/Am3M=
 github.com/gostaticanalysis/testutil v0.4.0/go.mod h1:bLIoPefWXrRi/ssLFWX1dx7Repi5x3CuviD3dgAZaBU=
+github.com/gotabit/comdex/v8 v8.1.2 h1:8hm5+JgEm7jYyIMH6K/VkmQBZOf314MFu8WdWripT9s=
+github.com/gotabit/comdex/v8 v8.1.2/go.mod h1:fMCVSxVjU0U8DmOAEWboSKcuMi3WfXV8e6luEFr6w08=
 github.com/gotestyourself/gotestyourself v2.2.0+incompatible/go.mod h1:zZKM6oeNM8k+FRljX1mnzVYeS8wiGgQyvST1/GafPbY=
 github.com/graph-gophers/graphql-go v0.0.0-20191115155744-f33e81362277/go.mod h1:9CQHMSxwO4MprSdzoIEobiHpoLtHm77vfxsvsIN5Vuc=
 github.com/gregjones/httpcache v0.0.0-20180305231024-9cad4c3443a7/go.mod h1:FecbI9+v66THATjSRHfNgh1IVFe/9kFxbXtjV0ctIMA=

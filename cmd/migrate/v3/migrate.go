@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/forbole/bdjuno/v3/modules/actions"
+	"github.com/gotabit/bdjuno/v3/modules/actions"
 
 	parsecmdtypes "github.com/forbole/juno/v4/cmd/parse/types"
 

@@ -1,6 +1,6 @@
 FROM golang:1.18-alpine AS builder
 RUN apk update && apk add --no-cache make git
-WORKDIR /go/src/github.com/forbole/bdjuno
+WORKDIR /go/src/github.com/gotabit/bdjuno
 COPY . ./
 
 ######################################################
@@ -32,5 +32,5 @@ FROM alpine:latest
 ##################################################
 #RUN apk update && apk add --no-cache ca-certificates build-base
 WORKDIR /bdjuno
-COPY --from=builder /go/src/github.com/forbole/bdjuno/build/bdjuno /usr/bin/bdjuno
+COPY --from=builder /go/src/github.com/gotabit/bdjuno/build/bdjuno /usr/bin/bdjuno
 CMD [ "bdjuno" ]

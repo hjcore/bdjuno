@@ -1,14 +1,14 @@
-module github.com/forbole/bdjuno/v3
+module github.com/gotabit/bdjuno/v3
 
 go 1.18
 
 require (
 	github.com/CosmWasm/wasmd v0.30.0
-	github.com/comdex-official/comdex/v8 v8.1.1
 	github.com/cosmos/cosmos-sdk v0.45.12
 	github.com/forbole/juno/v4 v4.0.1-0.20230208101932-3ab93fbccd60
 	github.com/go-co-op/gocron v1.18.0
 	github.com/gogo/protobuf v1.3.3
+	github.com/gotabit/comdex/v8 v8.1.2
 	github.com/jmoiron/sqlx v1.3.5
 	github.com/lib/pq v1.10.7
 	github.com/pelletier/go-toml v1.9.5
@@ -137,7 +137,6 @@ require (
 )
 
 replace (
-	github.com/comdex-official/comdex/v8 => github.com/forbole/comdex/v8 v8.1.1
 	github.com/confio/ics23/go => github.com/cosmos/cosmos-sdk/ics23/go v0.8.0
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 	github.com/tendermint/tendermint => github.com/informalsystems/tendermint v0.34.24

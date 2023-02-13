@@ -14,8 +14,8 @@ import (
 
 	junodb "github.com/forbole/juno/v4/database"
 
-	"github.com/forbole/bdjuno/v3/database"
-	"github.com/forbole/bdjuno/v3/types"
+	"github.com/gotabit/bdjuno/v3/database"
+	"github.com/gotabit/bdjuno/v3/types"
 
 	juno "github.com/forbole/juno/v4/types"
 
@@ -46,17 +46,11 @@ func (suite *DbTestSuite) SetupTest() {
 
 	// Build the database
 	dbCfg := dbconfig.NewDatabaseConfig(
-		"bdjuno",
-		"localhost",
-		6433,
-		"bdjuno",
-		"password",
-		"",
-		"public",
-		-1,
-		-1,
+		"postgresql://bdjuno:password@localhost:6433/bdjuno?sslmode=disable&search_path=public",
+		1,
+		1,
 		100000,
-		100,
+		1000,
 	)
 	db, err := database.Builder(junodb.NewContext(dbCfg, &codec, logging.DefaultLogger()))
 	suite.Require().NoError(err)
