@@ -1,6 +1,6 @@
 package utils
 
-import "github.com/gotabit/bdjuno/v3/types"
+import "github.com/gotabit/gjuno/v3/types"
 
 const (
 	maxPostgreSQLParams = 65535

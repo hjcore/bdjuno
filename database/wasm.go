@@ -5,9 +5,9 @@ import (
 	"fmt"
 
 	wasmtypes "github.com/CosmWasm/wasmd/x/wasm/types"
-	dbtypes "github.com/gotabit/bdjuno/v3/database/types"
-	dbutils "github.com/gotabit/bdjuno/v3/database/utils"
-	"github.com/gotabit/bdjuno/v3/types"
+	dbtypes "github.com/gotabit/gjuno/v3/database/types"
+	dbutils "github.com/gotabit/gjuno/v3/database/utils"
+	"github.com/gotabit/gjuno/v3/types"
 	"github.com/lib/pq"
 )
 

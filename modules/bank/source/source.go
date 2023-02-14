@@ -3,7 +3,7 @@ package source
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/gotabit/bdjuno/v3/types"
+	"github.com/gotabit/gjuno/v3/types"
 )
 
 type Source interface {

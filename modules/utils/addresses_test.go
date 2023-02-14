@@ -3,7 +3,7 @@ package utils_test
 import (
 	"testing"
 
-	"github.com/gotabit/bdjuno/v3/modules/utils"
+	"github.com/gotabit/gjuno/v3/modules/utils"
 
 	"github.com/stretchr/testify/require"
 )

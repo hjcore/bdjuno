@@ -1,4 +1,4 @@
-module github.com/gotabit/bdjuno/v3
+module github.com/gotabit/gjuno/v3
 
 go 1.18
 

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/gotabit/bdjuno/v3/types"
+	"github.com/gotabit/gjuno/v3/types"
 
-	dbtypes "github.com/gotabit/bdjuno/v3/database/types"
+	dbtypes "github.com/gotabit/gjuno/v3/database/types"
 )
 
 func (suite *DbTestSuite) insertToken(name string) {
@@ -37,7 +37,7 @@ func (suite *DbTestSuite) Test_GetTokensPriceID() {
 	}
 }
 
-func (suite *DbTestSuite) TestBigDipperDb_SaveTokenPrice() {
+func (suite *DbTestSuite) TestGatabitDb_SaveTokenPrice() {
 	suite.insertToken("desmos")
 	suite.insertToken("atom")
 
@@ -124,7 +124,7 @@ func (suite *DbTestSuite) TestBigDipperDb_SaveTokenPrice() {
 	}
 }
 
-func (suite *DbTestSuite) TestBigDipperDb_SaveTokenPriceHistory() {
+func (suite *DbTestSuite) TestGatabitDb_SaveTokenPriceHistory() {
 	suite.insertToken("desmos")
 	suite.insertToken("atom")
 

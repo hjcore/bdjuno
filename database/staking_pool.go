@@ -3,7 +3,7 @@ package database
 import (
 	"fmt"
 
-	"github.com/gotabit/bdjuno/v3/types"
+	"github.com/gotabit/gjuno/v3/types"
 )
 
 // SaveStakingPool allows to save for the given height the given stakingtypes pool

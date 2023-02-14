@@ -6,8 +6,8 @@ import (
 
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	dbtypes "github.com/gotabit/bdjuno/v3/database/types"
-	"github.com/gotabit/bdjuno/v3/types"
+	dbtypes "github.com/gotabit/gjuno/v3/database/types"
+	"github.com/gotabit/gjuno/v3/types"
 )
 
 // SaveStakingParams allows to store the given params into the database

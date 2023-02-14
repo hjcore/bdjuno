@@ -3,12 +3,10 @@ package database_test
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	dbtypes "github.com/gotabit/bdjuno/v3/database/types"
-
-	bddbtypes "github.com/gotabit/bdjuno/v3/database/types"
+	dbtypes "github.com/gotabit/gjuno/v3/database/types"
 )
 
-func (suite *DbTestSuite) TestBigDipperDb_SaveSupply() {
+func (suite *DbTestSuite) TestGatabitDb_SaveSupply() {
 	// Save the data
 	original := sdk.NewCoins(
 		sdk.NewCoin("desmos", sdk.NewInt(10000)),
@@ -18,9 +16,9 @@ func (suite *DbTestSuite) TestBigDipperDb_SaveSupply() {
 	suite.Require().NoError(err)
 
 	// Verify the data
-	expected := bddbtypes.NewSupplyRow(dbtypes.NewDbCoins(original), 10)
+	expected := dbtypes.NewSupplyRow(dbtypes.NewDbCoins(original), 10)
 
-	var rows []bddbtypes.SupplyRow
+	var rows []dbtypes.SupplyRow
 	err = suite.database.Sqlx.Select(&rows, `SELECT * FROM supply`)
 	suite.Require().NoError(err)
 	suite.Require().Len(rows, 1, "supply table should contain only one row")
@@ -37,7 +35,7 @@ func (suite *DbTestSuite) TestBigDipperDb_SaveSupply() {
 	suite.Require().NoError(err)
 
 	// Verify the data
-	rows = []bddbtypes.SupplyRow{}
+	rows = []dbtypes.SupplyRow{}
 	err = suite.database.Sqlx.Select(&rows, `SELECT * FROM supply`)
 	suite.Require().NoError(err)
 	suite.Require().Len(rows, 1, "supply table should contain only one row")
@@ -51,9 +49,9 @@ func (suite *DbTestSuite) TestBigDipperDb_SaveSupply() {
 	suite.Require().NoError(err)
 
 	// Verify the data
-	expected = bddbtypes.NewSupplyRow(dbtypes.NewDbCoins(coins), 10)
+	expected = dbtypes.NewSupplyRow(dbtypes.NewDbCoins(coins), 10)
 
-	rows = []bddbtypes.SupplyRow{}
+	rows = []dbtypes.SupplyRow{}
 	err = suite.database.Sqlx.Select(&rows, `SELECT * FROM supply`)
 	suite.Require().NoError(err)
 	suite.Require().Len(rows, 1, "supply table should contain only one row")
@@ -67,9 +65,9 @@ func (suite *DbTestSuite) TestBigDipperDb_SaveSupply() {
 	suite.Require().NoError(err)
 
 	// Verify the data
-	expected = bddbtypes.NewSupplyRow(dbtypes.NewDbCoins(coins), 20)
+	expected = dbtypes.NewSupplyRow(dbtypes.NewDbCoins(coins), 20)
 
-	rows = []bddbtypes.SupplyRow{}
+	rows = []dbtypes.SupplyRow{}
 	err = suite.database.Sqlx.Select(&rows, `SELECT * FROM supply`)
 	suite.Require().NoError(err)
 	suite.Require().Len(rows, 1, "supply table should contain only one row")

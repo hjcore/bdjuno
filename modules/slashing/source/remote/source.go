@@ -7,7 +7,7 @@ import (
 	slashingtypes "github.com/cosmos/cosmos-sdk/x/slashing/types"
 	"github.com/forbole/juno/v4/node/remote"
 
-	slashingsource "github.com/gotabit/bdjuno/v3/modules/slashing/source"
+	slashingsource "github.com/gotabit/gjuno/v3/modules/slashing/source"
 )
 
 var (

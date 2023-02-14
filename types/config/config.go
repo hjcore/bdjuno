@@ -6,10 +6,10 @@ import (
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v3"
 
-	"github.com/gotabit/bdjuno/v3/modules/actions"
+	"github.com/gotabit/gjuno/v3/modules/actions"
 )
 
-// Config represents the BDJuno configuration
+// Config represents the gjuno configuration
 type Config struct {
 	JunoConfig    junoconfig.Config `yaml:"-,inline"`
 	ActionsConfig *actions.Config   `yaml:"actions"`

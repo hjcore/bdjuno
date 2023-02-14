@@ -3,7 +3,7 @@ services:
   hasura:
     image: hasura/graphql-engine:v2.0.4
     ports:
-    - "8080:8080"
+      - "8080:8080"
     restart: always
     environment:
       ## this env var can be used to add the above postgres database to Hasura as a data source. this can be removed/updated based on your needs
@@ -15,12 +15,12 @@ services:
       HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
       ## uncomment next line to set an admin secret
       # HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
-  bdjuno:
+  gjuno:
     build:
       context: .
       dockerfile: Dockerfile
     restart: always
-    command: bdjuno parse --home /bdjuno/.bdjuno
+    command: gjuno parse --home /gjuno/.gjuno
     volumes:
       ## Modify first path to match configuration file.
-      - /bdjuno/.bdjuno:/bdjuno/.bdjuno
+      - /gjuno/.gjuno:/gjuno/.gjuno

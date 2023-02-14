@@ -11,7 +11,7 @@ import (
 var _ db.Database = &Db{}
 
 // Db represents a PostgreSQL database with expanded features.
-// so that it can properly store custom BigDipper-related data.
+// so that it can properly store custom Gatabit-related data.
 type Db struct {
 	*postgresql.Database
 	Sqlx *sqlx.DB

@@ -5,7 +5,7 @@ import (
 	distrtypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
 	"github.com/forbole/juno/v4/node/remote"
 
-	distrsource "github.com/gotabit/bdjuno/v3/modules/distribution/source"
+	distrsource "github.com/gotabit/gjuno/v3/modules/distribution/source"
 )
 
 var (

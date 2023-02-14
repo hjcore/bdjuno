@@ -5,15 +5,15 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	dbtypes "github.com/gotabit/bdjuno/v3/database/types"
+	dbtypes "github.com/gotabit/gjuno/v3/database/types"
 
-	"github.com/gotabit/bdjuno/v3/types"
+	"github.com/gotabit/gjuno/v3/types"
 
 	distrtypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
-	bddbtypes "github.com/gotabit/bdjuno/v3/database/types"
+	bddbtypes "github.com/gotabit/gjuno/v3/database/types"
 )
 
-func (suite *DbTestSuite) TestBigDipperDb_SaveCommunityPool() {
+func (suite *DbTestSuite) TestGatabitDb_SaveCommunityPool() {
 	// Save data
 	original := sdk.NewDecCoins(sdk.NewDecCoin("uatom", sdk.NewInt(100)))
 	err := suite.database.SaveCommunityPool(original, 10)
@@ -73,7 +73,7 @@ func (suite *DbTestSuite) TestBigDipperDb_SaveCommunityPool() {
 	suite.Require().True(expected.Equals(rows[0]), "updating with higher height should modify the data")
 }
 
-func (suite *DbTestSuite) TestBigDipperDb_SaveDistributionParams() {
+func (suite *DbTestSuite) TestGatabitDb_SaveDistributionParams() {
 	distrParams := distrtypes.Params{
 		CommunityTax:        sdk.NewDecWithPrec(2, 2),
 		BaseProposerReward:  sdk.NewDecWithPrec(1, 2),

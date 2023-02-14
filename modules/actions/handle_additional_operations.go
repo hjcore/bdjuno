@@ -6,8 +6,8 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/gotabit/bdjuno/v3/modules/actions/handlers"
-	actionstypes "github.com/gotabit/bdjuno/v3/modules/actions/types"
+	"github.com/gotabit/gjuno/v3/modules/actions/handlers"
+	actionstypes "github.com/gotabit/gjuno/v3/modules/actions/types"
 )
 
 var (

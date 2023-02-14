@@ -4,11 +4,11 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	feegranttypes "github.com/cosmos/cosmos-sdk/x/feegrant"
 
-	dbtypes "github.com/gotabit/bdjuno/v3/database/types"
-	"github.com/gotabit/bdjuno/v3/types"
+	dbtypes "github.com/gotabit/gjuno/v3/database/types"
+	"github.com/gotabit/gjuno/v3/types"
 )
 
-func (suite *DbTestSuite) TestBigDipperDb_SaveFeeGrantAllowance() {
+func (suite *DbTestSuite) TestGatabitDb_SaveFeeGrantAllowance() {
 	allowance := &feegranttypes.BasicAllowance{SpendLimit: nil, Expiration: nil}
 	granter, err := sdk.AccAddressFromBech32("cosmos1ltzt0z992ke6qgmtjxtygwzn36km4cy6cqdknt")
 	suite.Require().NoError(err)
@@ -42,7 +42,7 @@ func (suite *DbTestSuite) TestBigDipperDb_SaveFeeGrantAllowance() {
 	suite.Require().Equal(allowance, stored)
 }
 
-func (suite *DbTestSuite) TestBigDipperDb_RemoveFeeGrantAllowance() {
+func (suite *DbTestSuite) TestGatabitDb_RemoveFeeGrantAllowance() {
 	allowance := &feegranttypes.BasicAllowance{SpendLimit: nil, Expiration: nil}
 	granter, err := sdk.AccAddressFromBech32("cosmos1ltzt0z992ke6qgmtjxtygwzn36km4cy6cqdknt")
 	suite.Require().NoError(err)

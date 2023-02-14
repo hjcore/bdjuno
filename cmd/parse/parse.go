@@ -9,15 +9,15 @@ import (
 	parsegenesis "github.com/forbole/juno/v4/cmd/parse/genesis"
 
 	parsetransaction "github.com/forbole/juno/v4/cmd/parse/transactions"
-	parseauth "github.com/gotabit/bdjuno/v3/cmd/parse/auth"
-	parsebank "github.com/gotabit/bdjuno/v3/cmd/parse/bank"
-	parsedistribution "github.com/gotabit/bdjuno/v3/cmd/parse/distribution"
-	parsefeegrant "github.com/gotabit/bdjuno/v3/cmd/parse/feegrant"
-	parsegov "github.com/gotabit/bdjuno/v3/cmd/parse/gov"
-	parsemint "github.com/gotabit/bdjuno/v3/cmd/parse/mint"
-	parsepricefeed "github.com/gotabit/bdjuno/v3/cmd/parse/pricefeed"
-	parsestaking "github.com/gotabit/bdjuno/v3/cmd/parse/staking"
-	parsewasm "github.com/gotabit/bdjuno/v3/cmd/parse/wasm"
+	parseauth "github.com/gotabit/gjuno/v3/cmd/parse/auth"
+	parsebank "github.com/gotabit/gjuno/v3/cmd/parse/bank"
+	parsedistribution "github.com/gotabit/gjuno/v3/cmd/parse/distribution"
+	parsefeegrant "github.com/gotabit/gjuno/v3/cmd/parse/feegrant"
+	parsegov "github.com/gotabit/gjuno/v3/cmd/parse/gov"
+	parsemint "github.com/gotabit/gjuno/v3/cmd/parse/mint"
+	parsepricefeed "github.com/gotabit/gjuno/v3/cmd/parse/pricefeed"
+	parsestaking "github.com/gotabit/gjuno/v3/cmd/parse/staking"
+	parsewasm "github.com/gotabit/gjuno/v3/cmd/parse/wasm"
 )
 
 // NewParseCmd returns the Cobra command allowing to parse some chain data without having to re-sync the whole database

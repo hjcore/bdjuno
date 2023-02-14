@@ -4,15 +4,15 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/gotabit/bdjuno/v3/types"
+	"github.com/gotabit/gjuno/v3/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	slashingtypes "github.com/cosmos/cosmos-sdk/x/slashing/types"
 
-	dbtypes "github.com/gotabit/bdjuno/v3/database/types"
+	dbtypes "github.com/gotabit/gjuno/v3/database/types"
 )
 
-func (suite *DbTestSuite) TestBigDipperDb_ValidatorSigningInfo() {
+func (suite *DbTestSuite) TestGatabitDb_ValidatorSigningInfo() {
 	validator1 := suite.getValidator(
 		"cosmosvalcons1qqqqrezrl53hujmpdch6d805ac75n220ku09rl",
 		"cosmosvaloper1rcp29q3hpd246n6qak7jluqep4v006cdsc2kkl",
@@ -135,7 +135,7 @@ func (suite *DbTestSuite) TestBigDipperDb_ValidatorSigningInfo() {
 	}
 }
 
-func (suite *DbTestSuite) TestBigDipperDb_SaveSlashingParams() {
+func (suite *DbTestSuite) TestGatabitDb_SaveSlashingParams() {
 	// Save data
 	slashingParams := slashingtypes.Params{
 		SignedBlocksWindow:      10,

@@ -6,8 +6,8 @@ import (
 	juno "github.com/forbole/juno/v4/types"
 	tmctypes "github.com/tendermint/tendermint/rpc/core/types"
 
-	"github.com/gotabit/bdjuno/v3/modules/staking/keybase"
-	"github.com/gotabit/bdjuno/v3/types"
+	"github.com/gotabit/gjuno/v3/modules/staking/keybase"
+	"github.com/gotabit/gjuno/v3/types"
 
 	"github.com/rs/zerolog/log"
 
@@ -35,7 +35,7 @@ func (m *Module) getValidatorConsAddr(validator stakingtypes.Validator) (sdk.Con
 
 // ---------------------------------------------------------------------------------------------------------------------
 
-// ConvertValidator converts the given staking validator into a BDJuno validator
+// ConvertValidator converts the given staking validator into a gjuno validator
 func (m *Module) convertValidator(height int64, validator stakingtypes.Validator) (types.Validator, error) {
 	consAddr, err := m.getValidatorConsAddr(validator)
 	if err != nil {

@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/gotabit/bdjuno/v3/modules/actions/logging"
+	"github.com/gotabit/gjuno/v3/modules/actions/logging"
 
 	"github.com/rs/zerolog/log"
 )

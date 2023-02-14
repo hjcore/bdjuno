@@ -1,10 +1,10 @@
 package database_test
 
 import (
-	"github.com/gotabit/bdjuno/v3/database/types"
+	"github.com/gotabit/gjuno/v3/database/types"
 )
 
-func (suite *DbTestSuite) TestBigDipperDb_InsertEnableModules() {
+func (suite *DbTestSuite) TestGatabitDb_InsertEnableModules() {
 	modules := []string{"auth", "bank", "consensus", "distribution", "gov", "mint", "pricefeed", "staking", "supply"}
 	err := suite.database.InsertEnableModules(modules)
 	suite.Require().NoError(err)

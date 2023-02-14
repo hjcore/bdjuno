@@ -3,11 +3,11 @@ package database_test
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	dbtypes "github.com/gotabit/bdjuno/v3/database/types"
-	"github.com/gotabit/bdjuno/v3/types"
+	dbtypes "github.com/gotabit/gjuno/v3/database/types"
+	"github.com/gotabit/gjuno/v3/types"
 )
 
-func (suite *DbTestSuite) TestBigDipperDb_SaveStakingPool() {
+func (suite *DbTestSuite) TestGatabitDb_SaveStakingPool() {
 	// Save the data
 	original := types.NewPool(sdk.NewInt(50), sdk.NewInt(100), sdk.NewInt(5), sdk.NewInt(1), 10)
 	err := suite.database.SaveStakingPool(original)

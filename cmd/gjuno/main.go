@@ -8,13 +8,13 @@ import (
 	startcmd "github.com/forbole/juno/v4/cmd/start"
 	"github.com/forbole/juno/v4/modules/messages"
 
-	migratecmd "github.com/gotabit/bdjuno/v3/cmd/migrate"
-	parsecmd "github.com/gotabit/bdjuno/v3/cmd/parse"
+	migratecmd "github.com/gotabit/gjuno/v3/cmd/migrate"
+	parsecmd "github.com/gotabit/gjuno/v3/cmd/parse"
 
-	"github.com/gotabit/bdjuno/v3/types/config"
+	"github.com/gotabit/gjuno/v3/types/config"
 
-	"github.com/gotabit/bdjuno/v3/database"
-	"github.com/gotabit/bdjuno/v3/modules"
+	"github.com/gotabit/gjuno/v3/database"
+	"github.com/gotabit/gjuno/v3/modules"
 
 	cmdxapp "github.com/gotabit/comdex/v8/app"
 )
@@ -28,7 +28,7 @@ func main() {
 		WithEncodingConfigBuilder(config.MakeEncodingConfig(getBasicManagers())).
 		WithRegistrar(modules.NewRegistrar(getAddressesParser()))
 
-	cfg := cmd.NewConfig("bdjuno").
+	cfg := cmd.NewConfig("gjuno").
 		WithInitConfig(initCfg).
 		WithParseConfig(parseCfg)
 

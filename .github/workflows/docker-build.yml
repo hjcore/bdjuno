@@ -15,18 +15,18 @@ jobs:
         with:
           fetch-depth: 0
       - 
-        name: Set bdjuno chain_name
+        name: Set gjuno chain_name
         shell: bash
         run: echo "CHAIN_NAME=$(echo ${GITHUB_REF#refs/heads/} | sed 's/\//_/g')" >> $GITHUB_ENV
       -
-        name: Set bdjuno version
+        name: Set gjuno version
         shell: bash
         run: echo "GITHUB_VERSION=$(git describe --tags)" >> $GITHUB_ENV
       -
         name: Prepare tags
         id: prep
         run: |
-          DOCKER_IMAGE=${{ secrets.DOCKERHUB_BDJUNO_REPO }}
+          DOCKER_IMAGE=${{ secrets.DOCKERHUB_gjuno_REPO }}
           CHAIN_NAME="${{env.CHAIN_NAME}}"
           VERSION="${{env.GITHUB_VERSION}}"
           TAGS="${DOCKER_IMAGE}:${CHAIN_NAME}-${VERSION}"

@@ -1,7 +1,7 @@
 package mint
 
 import (
-	"github.com/gotabit/bdjuno/v3/modules/utils"
+	"github.com/gotabit/gjuno/v3/modules/utils"
 
 	"github.com/go-co-op/gocron"
 	"github.com/rs/zerolog/log"

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/gotabit/bdjuno/v3/modules/actions/types"
+	"github.com/gotabit/gjuno/v3/modules/actions/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/rs/zerolog/log"

@@ -1,6 +1,6 @@
 package utils
 
-import "github.com/gotabit/bdjuno/v3/types"
+import "github.com/gotabit/gjuno/v3/types"
 
 func SplitWasmContracts(contracts []types.WasmContract, paramsNumber int) [][]types.WasmContract {
 	maxBalancesPerSlice := maxPostgreSQLParams / paramsNumber

@@ -7,9 +7,9 @@ import (
 	"github.com/forbole/juno/v4/types/config"
 	"github.com/spf13/cobra"
 
-	"github.com/gotabit/bdjuno/v3/database"
-	"github.com/gotabit/bdjuno/v3/modules/staking"
-	modulestypes "github.com/gotabit/bdjuno/v3/modules/types"
+	"github.com/gotabit/gjuno/v3/database"
+	"github.com/gotabit/gjuno/v3/modules/staking"
+	modulestypes "github.com/gotabit/gjuno/v3/modules/types"
 )
 
 // poolCmd returns the Cobra command allowing to refresh x/staking pool

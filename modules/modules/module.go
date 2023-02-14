@@ -4,7 +4,7 @@ import (
 	"github.com/forbole/juno/v4/modules"
 	"github.com/forbole/juno/v4/types/config"
 
-	"github.com/gotabit/bdjuno/v3/database"
+	"github.com/gotabit/gjuno/v3/database"
 )
 
 var (

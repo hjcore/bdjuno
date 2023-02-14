@@ -6,12 +6,12 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	minttypes "github.com/cosmos/cosmos-sdk/x/mint/types"
 
-	"github.com/gotabit/bdjuno/v3/types"
+	"github.com/gotabit/gjuno/v3/types"
 
-	dbtypes "github.com/gotabit/bdjuno/v3/database/types"
+	dbtypes "github.com/gotabit/gjuno/v3/database/types"
 )
 
-func (suite *DbTestSuite) TestBigDipperDb_SaveInflation() {
+func (suite *DbTestSuite) TestGatabitDb_SaveInflation() {
 
 	// Save the data
 	err := suite.database.SaveInflation(sdk.NewDecWithPrec(10050, 2), 100)
@@ -72,7 +72,7 @@ func (suite *DbTestSuite) TestBigDipperDb_SaveInflation() {
 	suite.Require().True(expected.Equal(rows[0]), "data should change with higher height")
 }
 
-func (suite *DbTestSuite) TestBigDipperDb_SaveMintParams() {
+func (suite *DbTestSuite) TestGatabitDb_SaveMintParams() {
 	mintParams := minttypes.NewParams(
 		"udaric",
 		sdk.NewDecWithPrec(4, 1),

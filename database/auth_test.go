@@ -4,9 +4,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authttypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 
-	"github.com/gotabit/bdjuno/v3/types"
+	"github.com/gotabit/gjuno/v3/types"
 
-	dbtypes "github.com/gotabit/bdjuno/v3/database/types"
+	dbtypes "github.com/gotabit/gjuno/v3/database/types"
 )
 
 func (suite *DbTestSuite) TestSaveAccount() {
@@ -39,7 +39,7 @@ func (suite *DbTestSuite) TestSaveAccount() {
 	suite.Require().True(expectedAccountRow.Equal(accountRows[0]))
 }
 
-func (suite *DbTestSuite) TestBigDipperDb_GetAccounts() {
+func (suite *DbTestSuite) TestGatabitDb_GetAccounts() {
 	// Insert the data
 	queries := []string{
 		`INSERT INTO account (address) VALUES ('cosmos1ltzt0z992ke6qgmtjxtygwzn36km4cy6cqdknt')`,

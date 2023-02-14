@@ -14,8 +14,8 @@ import (
 
 	junodb "github.com/forbole/juno/v4/database"
 
-	"github.com/gotabit/bdjuno/v3/database"
-	"github.com/gotabit/bdjuno/v3/types"
+	"github.com/gotabit/gjuno/v3/database"
+	"github.com/gotabit/gjuno/v3/types"
 
 	juno "github.com/forbole/juno/v4/types"
 
@@ -46,7 +46,7 @@ func (suite *DbTestSuite) SetupTest() {
 
 	// Build the database
 	dbCfg := dbconfig.NewDatabaseConfig(
-		"postgresql://bdjuno:password@localhost:6433/bdjuno?sslmode=disable&search_path=public",
+		"postgresql://gjuno:password@localhost:6433/gjuno?sslmode=disable&search_path=public",
 		1,
 		1,
 		100000,
@@ -55,15 +55,15 @@ func (suite *DbTestSuite) SetupTest() {
 	db, err := database.Builder(junodb.NewContext(dbCfg, &codec, logging.DefaultLogger()))
 	suite.Require().NoError(err)
 
-	bigDipperDb, ok := (db).(*database.Db)
+	GatabitDb, ok := (db).(*database.Db)
 	suite.Require().True(ok)
 
 	// Delete the public schema
-	_, err = bigDipperDb.SQL.Exec(`DROP SCHEMA public CASCADE;`)
+	_, err = GatabitDb.SQL.Exec(`DROP SCHEMA public CASCADE;`)
 	suite.Require().NoError(err)
 
 	// Re-create the schema
-	_, err = bigDipperDb.SQL.Exec(`CREATE SCHEMA public;`)
+	_, err = GatabitDb.SQL.Exec(`CREATE SCHEMA public;`)
 	suite.Require().NoError(err)
 
 	dirPath := path.Join(".", "schema")
@@ -77,12 +77,12 @@ func (suite *DbTestSuite) SetupTest() {
 		commentsRegExp := regexp.MustCompile(`/\*.*\*/`)
 		requests := strings.Split(string(file), ";")
 		for _, request := range requests {
-			_, err := bigDipperDb.SQL.Exec(commentsRegExp.ReplaceAllString(request, ""))
+			_, err := GatabitDb.SQL.Exec(commentsRegExp.ReplaceAllString(request, ""))
 			suite.Require().NoError(err)
 		}
 	}
 
-	suite.database = bigDipperDb
+	suite.database = GatabitDb
 }
 
 // getBlock builds, stores and returns a block for the provided height

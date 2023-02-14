@@ -1,21 +1,18 @@
-# BDJuno
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/gotabit/bdjuno/Tests)](https://github.com/gotabit/bdjuno/actions?query=workflow%3ATests)
-[![Go Report Card](https://goreportcard.com/badge/github.com/gotabit/bdjuno)](https://goreportcard.com/report/github.com/gotabit/bdjuno)
-![Codecov branch](https://img.shields.io/codecov/c/github/gotabit/bdjuno/cosmos/v0.40.x)
+# gjuno
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/gotabit/gjuno/Tests)](https://github.com/gotabit/gjuno/actions?query=workflow%3ATests)
+[![Go Report Card](https://goreportcard.com/badge/github.com/gotabit/gjuno)](https://goreportcard.com/report/github.com/gotabit/gjuno)
+![Codecov branch](https://img.shields.io/codecov/c/github/gotabit/gjuno/cosmos/v0.40.x)
 
-BDJuno (shorthand for BigDipper Juno) is the [Juno](https://github.com/forbole/juno) implementation
-for [BigDipper](https://github.com/forbole/big-dipper).
+GJuno (shorthand for Gatabit Juno) is the [Juno](https://github.com/gotabit/gjuno) implementation
+for [gotabit](https://github.com/gotabit/gotabit).
 
-It extends the custom Juno behavior by adding different handlers and custom operations to make it easier for BigDipper
+It extends the custom Juno behavior by adding different handlers and custom operations to make it easier for gotabit
 showing the data inside the UI.
 
 All the chains' data that are queried from the RPC and gRPC endpoints are stored inside
 a [PostgreSQL](https://www.postgresql.org/) database on top of which [GraphQL](https://graphql.org/) APIs can then be
 created using [Hasura](https://hasura.io/).
 
-## Usage
-To know how to setup and run BDJuno, please refer to
-the [docs website](https://docs.bigdipper.live/cosmos-based/parser/overview/).
 
 ## Testing
 If you want to test the code, you can do so by running

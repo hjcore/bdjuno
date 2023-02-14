@@ -4,8 +4,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	"github.com/forbole/juno/v4/modules"
 
-	"github.com/gotabit/bdjuno/v3/database"
-	stakingsource "github.com/gotabit/bdjuno/v3/modules/staking/source"
+	"github.com/gotabit/gjuno/v3/database"
+	stakingsource "github.com/gotabit/gjuno/v3/modules/staking/source"
 )
 
 var (

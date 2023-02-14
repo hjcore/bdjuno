@@ -3,7 +3,7 @@ package pricefeed
 import (
 	"gopkg.in/yaml.v3"
 
-	"github.com/gotabit/bdjuno/v3/types"
+	"github.com/gotabit/gjuno/v3/types"
 )
 
 // Config contains the configuration about the pricefeed module

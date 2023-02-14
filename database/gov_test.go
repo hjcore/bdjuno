@@ -10,15 +10,15 @@ import (
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/gotabit/bdjuno/v3/types"
+	"github.com/gotabit/gjuno/v3/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 
-	dbtypes "github.com/gotabit/bdjuno/v3/database/types"
+	dbtypes "github.com/gotabit/gjuno/v3/database/types"
 )
 
-func (suite *DbTestSuite) TestBigDipperDb_SaveGovParams() {
+func (suite *DbTestSuite) TestGatabitDb_SaveGovParams() {
 	votingParams := govtypes.NewVotingParams(time.Second * 10)
 	tallyParams := govtypes.NewTallyParams(sdk.NewDec(10), sdk.NewDec(10), sdk.NewDec(10))
 	depositParams := govtypes.NewDepositParams(sdk.NewCoins(sdk.NewCoin("uatom", sdk.NewInt(10))), time.Minute*5)
@@ -110,7 +110,7 @@ func (suite *DbTestSuite) encodeProposalContent(content govtypes.Content) string
 	return string(contentBz)
 }
 
-func (suite *DbTestSuite) TestBigDipperDb_SaveProposals() {
+func (suite *DbTestSuite) TestGatabitDb_SaveProposals() {
 	proposer1 := suite.getAccount("cosmos1z4hfrxvlgl4s8u4n5ngjcw8kdqrcv43599amxs")
 	proposer2 := suite.getAccount("cosmos184ma3twcfjqef6k95ne8w2hk80x2kah7vcwy4a")
 
@@ -185,7 +185,7 @@ func (suite *DbTestSuite) TestBigDipperDb_SaveProposals() {
 	}
 }
 
-func (suite *DbTestSuite) TestBigDipperDb_GetProposal() {
+func (suite *DbTestSuite) TestGatabitDb_GetProposal() {
 	content := govtypes.NewTextProposal("title", "description")
 	proposer := suite.getAccount("cosmos1z4hfrxvlgl4s8u4n5ngjcw8kdqrcv43599amxs")
 	proposal := types.NewProposal(
@@ -210,7 +210,7 @@ func (suite *DbTestSuite) TestBigDipperDb_GetProposal() {
 	suite.Require().True(proposal.Equal(*stored))
 }
 
-func (suite *DbTestSuite) TestBigDipperDb_GetOpenProposalsIds() {
+func (suite *DbTestSuite) TestGatabitDb_GetOpenProposalsIds() {
 	proposer1 := suite.getAccount("cosmos1z4hfrxvlgl4s8u4n5ngjcw8kdqrcv43599amxs")
 	proposer2 := suite.getAccount("cosmos184ma3twcfjqef6k95ne8w2hk80x2kah7vcwy4a")
 
@@ -291,7 +291,7 @@ func (suite *DbTestSuite) TestBigDipperDb_GetOpenProposalsIds() {
 	suite.Require().Equal([]uint64{1, 2, 6}, ids)
 }
 
-func (suite *DbTestSuite) TestBigDipperDb_UpdateProposal() {
+func (suite *DbTestSuite) TestGatabitDb_UpdateProposal() {
 	proposal := suite.getProposalRow(1)
 	proposer, err := sdk.AccAddressFromBech32(proposal.Proposer)
 	suite.Require().NoError(err)
@@ -332,7 +332,7 @@ func (suite *DbTestSuite) TestBigDipperDb_UpdateProposal() {
 
 // -------------------------------------------------------------------------------------------------------------------
 
-func (suite *DbTestSuite) TestBigDipperDb_SaveDeposits() {
+func (suite *DbTestSuite) TestGatabitDb_SaveDeposits() {
 	_ = suite.getBlock(9)
 	_ = suite.getBlock(10)
 	_ = suite.getBlock(11)
@@ -406,7 +406,7 @@ func (suite *DbTestSuite) TestBigDipperDb_SaveDeposits() {
 
 // -------------------------------------------------------------------------------------------------------------------
 
-func (suite *DbTestSuite) TestBigDipperDb_SaveVote() {
+func (suite *DbTestSuite) TestGatabitDb_SaveVote() {
 	_ = suite.getBlock(0)
 	_ = suite.getBlock(1)
 	_ = suite.getBlock(2)
@@ -466,7 +466,7 @@ func (suite *DbTestSuite) TestBigDipperDb_SaveVote() {
 	suite.Require().True(expected.Equals(result[0]))
 }
 
-func (suite *DbTestSuite) TestBigDipperDb_SaveTallyResults() {
+func (suite *DbTestSuite) TestGatabitDb_SaveTallyResults() {
 	suite.getProposalRow(1)
 	suite.getProposalRow(2)
 	suite.getProposalRow(3)
@@ -519,7 +519,7 @@ func (suite *DbTestSuite) TestBigDipperDb_SaveTallyResults() {
 
 // -------------------------------------------------------------------------------------------------------------------
 
-func (suite *DbTestSuite) TestBigDipperDb_SaveProposalStakingPoolSnapshot() {
+func (suite *DbTestSuite) TestGatabitDb_SaveProposalStakingPoolSnapshot() {
 	_ = suite.getBlock(9)
 	_ = suite.getBlock(10)
 	_ = suite.getBlock(11)
@@ -619,7 +619,7 @@ func (suite *DbTestSuite) TestBigDipperDb_SaveProposalStakingPoolSnapshot() {
 	))
 }
 
-func (suite *DbTestSuite) TestBigDipperDb_SaveProposalValidatorsStatusesSnapshots() {
+func (suite *DbTestSuite) TestGatabitDb_SaveProposalValidatorsStatusesSnapshots() {
 	_ = suite.getBlock(9)
 	_ = suite.getBlock(10)
 	_ = suite.getBlock(11)
@@ -833,7 +833,7 @@ func (suite *DbTestSuite) TestBigDipperDb_SaveProposalValidatorsStatusesSnapshot
 	})
 }
 
-func (suite *DbTestSuite) TestBigDipperDb_SaveSoftwareUpgradePlan() {
+func (suite *DbTestSuite) TestGatabitDb_SaveSoftwareUpgradePlan() {
 	_ = suite.getProposalRow(1)
 
 	// ----------------------------------------------------------------------------------------------------------------
@@ -913,7 +913,7 @@ func (suite *DbTestSuite) TestBigDipperDb_SaveSoftwareUpgradePlan() {
 	})
 }
 
-func (suite *DbTestSuite) TestBigDipperDb_DeleteSoftwareUpgradePlan() {
+func (suite *DbTestSuite) TestGatabitDb_DeleteSoftwareUpgradePlan() {
 	_ = suite.getProposalRow(1)
 
 	// Save software upgrade plan at height 10 with upgrade height at 100
@@ -937,7 +937,7 @@ func (suite *DbTestSuite) TestBigDipperDb_DeleteSoftwareUpgradePlan() {
 
 }
 
-func (suite *DbTestSuite) TestBigDipperDb_CheckSoftwareUpgradePlan() {
+func (suite *DbTestSuite) TestGatabitDb_CheckSoftwareUpgradePlan() {
 	_ = suite.getProposalRow(1)
 
 	// Save software upgrade plan at height 10 with upgrade height at 100

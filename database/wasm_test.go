@@ -6,8 +6,8 @@ import (
 
 	wasmtypes "github.com/CosmWasm/wasmd/x/wasm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	dbtypes "github.com/gotabit/bdjuno/v3/database/types"
-	"github.com/gotabit/bdjuno/v3/types"
+	dbtypes "github.com/gotabit/gjuno/v3/database/types"
+	"github.com/gotabit/gjuno/v3/types"
 )
 
 func (suite *DbTestSuite) TestSaveWasmParams() error {

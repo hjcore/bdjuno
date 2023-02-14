@@ -1,13 +1,13 @@
 package modules
 
 import (
-	"github.com/gotabit/bdjuno/v3/modules/actions"
-	"github.com/gotabit/bdjuno/v3/modules/types"
+	"github.com/gotabit/gjuno/v3/modules/actions"
+	"github.com/gotabit/gjuno/v3/modules/types"
 
 	"github.com/forbole/juno/v4/modules/pruning"
 	"github.com/forbole/juno/v4/modules/telemetry"
 
-	"github.com/gotabit/bdjuno/v3/modules/slashing"
+	"github.com/gotabit/gjuno/v3/modules/slashing"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
@@ -15,23 +15,23 @@ import (
 	"github.com/forbole/juno/v4/modules/messages"
 	"github.com/forbole/juno/v4/modules/registrar"
 
-	"github.com/gotabit/bdjuno/v3/utils"
+	"github.com/gotabit/gjuno/v3/utils"
 
-	"github.com/gotabit/bdjuno/v3/database"
-	"github.com/gotabit/bdjuno/v3/modules/auth"
-	"github.com/gotabit/bdjuno/v3/modules/bank"
-	"github.com/gotabit/bdjuno/v3/modules/consensus"
-	"github.com/gotabit/bdjuno/v3/modules/distribution"
-	"github.com/gotabit/bdjuno/v3/modules/feegrant"
+	"github.com/gotabit/gjuno/v3/database"
+	"github.com/gotabit/gjuno/v3/modules/auth"
+	"github.com/gotabit/gjuno/v3/modules/bank"
+	"github.com/gotabit/gjuno/v3/modules/consensus"
+	"github.com/gotabit/gjuno/v3/modules/distribution"
+	"github.com/gotabit/gjuno/v3/modules/feegrant"
 
-	dailyrefetch "github.com/gotabit/bdjuno/v3/modules/daily_refetch"
-	"github.com/gotabit/bdjuno/v3/modules/gov"
-	"github.com/gotabit/bdjuno/v3/modules/mint"
-	"github.com/gotabit/bdjuno/v3/modules/modules"
-	"github.com/gotabit/bdjuno/v3/modules/pricefeed"
-	"github.com/gotabit/bdjuno/v3/modules/staking"
-	"github.com/gotabit/bdjuno/v3/modules/upgrade"
-	"github.com/gotabit/bdjuno/v3/modules/wasm"
+	dailyrefetch "github.com/gotabit/gjuno/v3/modules/daily_refetch"
+	"github.com/gotabit/gjuno/v3/modules/gov"
+	"github.com/gotabit/gjuno/v3/modules/mint"
+	"github.com/gotabit/gjuno/v3/modules/modules"
+	"github.com/gotabit/gjuno/v3/modules/pricefeed"
+	"github.com/gotabit/gjuno/v3/modules/staking"
+	"github.com/gotabit/gjuno/v3/modules/upgrade"
+	"github.com/gotabit/gjuno/v3/modules/wasm"
 )
 
 // UniqueAddressesParser returns a wrapper around the given parser that removes all duplicated addresses
@@ -52,7 +52,7 @@ var (
 	_ registrar.Registrar = &Registrar{}
 )
 
-// Registrar represents the modules.Registrar that allows to register all modules that are supported by BigDipper
+// Registrar represents the modules.Registrar that allows to register all modules that are supported by Gatabit
 type Registrar struct {
 	parser messages.MessageAddressesParser
 }

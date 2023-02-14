@@ -32,11 +32,11 @@ BUILD_FLAGS :=  -ldflags '$(LD_FLAGS)' -tags "$(build_tags)"
 
 build: go.sum
 ifeq ($(OS),Windows_NT)
-	@echo "building bdjuno binary..."
-	@go build -mod=readonly $(BUILD_FLAGS) -o build/bdjuno.exe ./cmd/bdjuno
+	@echo "building gjuno binary..."
+	@go build -mod=readonly $(BUILD_FLAGS) -o build/gjuno.exe ./cmd/gjuno
 else
-	@echo "building bdjuno binary..."
-	@go build -mod=readonly $(BUILD_FLAGS) -o build/bdjuno ./cmd/bdjuno
+	@echo "building gjuno binary..."
+	@go build -mod=readonly $(BUILD_FLAGS) -o build/gjuno ./cmd/gjuno
 endif
 .PHONY: build
 
@@ -45,8 +45,8 @@ endif
 ###############################################################################
 
 install: go.sum
-	@echo "installing bdjuno binary..."
-	@go install -mod=readonly $(BUILD_FLAGS) ./cmd/bdjuno
+	@echo "installing gjuno binary..."
+	@go install -mod=readonly $(BUILD_FLAGS) ./cmd/gjuno
 .PHONY: install
 
 ###############################################################################
@@ -55,12 +55,12 @@ install: go.sum
 
 stop-docker-test:
 	@echo "Stopping Docker container..."
-	@docker stop bdjuno-test-db || true && docker rm bdjuno-test-db || true
+	@docker stop gjuno-test-db || true && docker rm gjuno-test-db || true
 .PHONY: stop-docker-test
 
 start-docker-test: stop-docker-test
 	@echo "Starting Docker container..."
-	@docker run --name bdjuno-test-db -e POSTGRES_USER=bdjuno -e POSTGRES_PASSWORD=password -e POSTGRES_DB=bdjuno -d -p 6433:5432 postgres
+	@docker run --name gjuno-test-db -e POSTGRES_USER=gjuno -e POSTGRES_PASSWORD=password -e POSTGRES_DB=gjuno -d -p 6433:5432 postgres
 .PHONY: start-docker-test
 
 test-unit: start-docker-test
@@ -78,7 +78,7 @@ lint-fix:
 format:
 	find . -name '*.go' -type f -not -path "*.git*" | xargs gofmt -w -s
 	find . -name '*.go' -type f -not -path "*.git*" | xargs misspell -w
-	find . -name '*.go' -type f -not -path "*.git*" | xargs goimports -w -local github.com/gotabit/bdjuno
+	find . -name '*.go' -type f -not -path "*.git*" | xargs goimports -w -local github.com/gotabit/gjuno
 .PHONY: format
 
 clean:

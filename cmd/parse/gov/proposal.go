@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	modulestypes "github.com/gotabit/bdjuno/v3/modules/types"
+	modulestypes "github.com/gotabit/gjuno/v3/modules/types"
 	"github.com/rs/zerolog/log"
 
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
@@ -16,13 +16,13 @@ import (
 
 	"github.com/forbole/juno/v4/parser"
 
-	"github.com/gotabit/bdjuno/v3/database"
-	"github.com/gotabit/bdjuno/v3/modules/distribution"
-	"github.com/gotabit/bdjuno/v3/modules/gov"
-	"github.com/gotabit/bdjuno/v3/modules/mint"
-	"github.com/gotabit/bdjuno/v3/modules/slashing"
-	"github.com/gotabit/bdjuno/v3/modules/staking"
-	"github.com/gotabit/bdjuno/v3/utils"
+	"github.com/gotabit/gjuno/v3/database"
+	"github.com/gotabit/gjuno/v3/modules/distribution"
+	"github.com/gotabit/gjuno/v3/modules/gov"
+	"github.com/gotabit/gjuno/v3/modules/mint"
+	"github.com/gotabit/gjuno/v3/modules/slashing"
+	"github.com/gotabit/gjuno/v3/modules/staking"
+	"github.com/gotabit/gjuno/v3/utils"
 )
 
 // proposalCmd returns the Cobra command allowing to fix all things related to a proposal

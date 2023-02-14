@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/gotabit/bdjuno/v3/types"
+	"github.com/gotabit/gjuno/v3/types"
 	tmtypes "github.com/tendermint/tendermint/types"
 
 	wasmtypes "github.com/CosmWasm/wasmd/x/wasm/types"
